@@ -2,3 +2,75 @@ body
 {
     background-color: #4169e1;
 }
+
+
+ul{
+    background-color: darkgray;
+    list-style-type: none;
+    margin: 0;
+    padding: 6px;
+    border-radius: 6px;
+}
+
+
+
+li a{
+    float: left;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 6px;
+    margin: 6px;
+
+}
+
+  
+/* Dropdown Button */
+.dropdownBtn {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 6px;
+    margin: 6px;
+
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropdownBtn:hover{
+    background-color: gray;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: lightgray;
+    box-shadow: 0px 8px 6px 0px rgba(0,0,0,0.5);
+    z-index: 1;
+    text-align: center;
+  }
+
+  .colorPicker
+  {
+      outline-style: inset;
+      padding: 6px;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #dddddd}
+  
+
+
+.show {display:inline-block;}

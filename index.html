@@ -10,14 +10,32 @@
     <title>CSCJ</title>
 </head>
 
-<body onLoad = "Start()">
+<body id="body" onLoad="Start()">
 
-    <h1>CSCJ</h1>
-    
-    <div>
-        <input type="color" id="backgroundColor" value="#4169e1" onchange="ChangeColor(this)">
-        <label for="backgroundColor">Background Color</label>
-    </div>
+    <ul id="navbar">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <!--Theme Dropdown-->
+        <li class="dropdown">
+            <button onclick="DropdownClick('themeDropdown')" class="dropdownBtn">Theme</button>
+            <div id="themeDropdown" class="dropdown-content">
+                <div class="colorPicker">
+                    <input type="color" id="backgroundColor" value="#4169e1" onclick="PickingColor()"
+                        onchange="ChangeColor(this, 'body')">
+                    <label for="backgroundColor"><br>Background Color</label>
+                </div>
+                <div class="colorPicker">
+                    <input type="color" id="navbarColor" value="#4169e1" onclick="PickingColor()"
+                        onchange="ChangeColor(this, 'navbar')">
+                    <label for="navbarColor"><br>Bar Color</label>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+
+
+
 
 
 </body>
