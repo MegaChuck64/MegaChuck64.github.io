@@ -5,38 +5,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="style.css">
+    <script src="utils.js"></script>
+    <script src="global.js"></script>
     <script src="index.js"></script>
 
     <title>CSCJ</title>
 </head>
 
-<body id="body" onLoad="Start()">
+<body id="body" >
 
-    <ul id="navbar">
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/about.html">About</a></li>
-        <!--Theme Dropdown-->
-        <li class="dropdown">
-            <button onclick="DropdownClick('themeDropdown')" class="dropdownBtn">Theme</button>
-            <div id="themeDropdown" class="dropdown-content">
-                <div class="colorPicker">
-                    <input type="color" id="backgroundColor" value="#4169e1" onclick="PickingColor()"
-                        onchange="ChangeColor(this, 'body')">
-                    <label for="backgroundColor"><br>Background Color</label>
-                </div>
-                <div class="colorPicker">
-                    <input type="color" id="navbarColor" value="#4169e1" onclick="PickingColor()"
-                        onchange="ChangeColor(this, 'navbar')">
-                    <label for="navbarColor"><br>Bar Color</label>
-                </div>
-            </div>
-        </li>
-    </ul>
-
-
-
-
-
+<div include-html="navbar.html"></div>
+<script> 
+includeHTML(); 
+</script>
 
 </body>
 
