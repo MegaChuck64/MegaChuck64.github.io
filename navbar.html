@@ -1,21 +1,35 @@
 <ul id="navbar">
-    <li><a href="/index.html">Home</a></li>
-    <li><a href="/about.html">About</a></li>
-    <li><a href="/kenz.html">Kenz</a></li>
+    <li id="navtab"><a href="/index.html">Home</a></li>
+    <li id="navtab"><a href="/about.html">About</a></li>
     <!--Theme Dropdown-->
-    <li class="dropdown">
+    <li  id="navtab" class="dropdown">
         <button onclick="DropdownClick('themeDropdown')" class="dropdownBtn">Theme</button>
         <div id="themeDropdown" class="dropdown-content">
+
             <div class="colorPicker">
-                <input type="color" id="backgroundColor" value="#4169e1" onclick="PickingColor()"
-                    onchange="ChangeColor(this, 'body')">
+                <input type="color" id="backgroundColor" value="#4169e1" onclick="PickingTheme(true)"
+                    onchange="ChangeColor(this, 'body'); PickingTheme(false);">
                 <label for="backgroundColor"><br>Background Color</label>
             </div>
+            
             <div class="colorPicker">
-                <input type="color" id="navbarColor" value="#4169e1" onclick="PickingColor()"
-                    onchange="ChangeColor(this, 'navbar')">
+                <input type="color" id="navbarColor" value="#4169e1" onclick="PickingTheme(true)"
+                    onchange="ChangeColor(this, 'navbar'); PickingTheme(false);">
                 <label for="navbarColor"><br>Bar Color</label>
             </div>
+
+            <div class="optionPicker">
+                <select id="weatherSelect" onfocus="PickingTheme(true)" onchange="ChangeWeather(this.value); PickingTheme(false);">
+                    <option value="raining">Rain</option>
+                    <option value="snowing">Snow</option>
+                    <option value="none">None</option>
+                </select>
+
+                <label for="weatherSelect"><br>Weather</label>
+            </div>
+
         </div>
     </li>
+
+
 </ul>

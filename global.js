@@ -16,12 +16,15 @@ function includeHTML()
             xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function ()
             {
+                //finished loading
                 if (this.readyState == 4)
                 {
+                    //okay status
                     if (this.status == 200) 
                     {
+                        //This is what we do
                         elmnt.innerHTML = this.responseText;
-                        LoadColors(elmnt);
+                        LoadTheme(elmnt);
                     }
                     if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
                     /* Remove the attribute, and call this function once more: */
@@ -47,9 +50,9 @@ function includeHTML()
 
 
 
-var pickingColor = false;
+var pickingTheme = false;
 
-function LoadColors(doc)
+function LoadTheme(doc)
 {
     //body
     document.body.style.backgroundColor = localStorage.getItem("body_color");
@@ -61,11 +64,14 @@ function LoadColors(doc)
     navbar.style.backgroundColor = localStorage.getItem("navbar_color");
     var nCol = findChildByID(doc, "navbarColor", true);
     nCol.value = localStorage.getItem("navbar_color");
+
+    var weatherPicker = findChildByID(doc, "weatherSelect", true);
+    weatherPicker.value = localStorage.getItem("weather");
 }
 
-function PickingColor()
+function PickingTheme(val)
 {
-    pickingColor = true;
+    pickingTheme = val;
 }
 
 function ChangeColor(colorPicker, id)
@@ -73,8 +79,8 @@ function ChangeColor(colorPicker, id)
     var el = document.getElementById(id);
     el.style.backgroundColor = colorPicker.value;
     localStorage.setItem(id + "_color", colorPicker.value);
-    pickingColor = false;
 }
+
 
 
 function DropdownClick(content)
@@ -86,7 +92,7 @@ function DropdownClick(content)
 
 window.onclick = function (event)
 {
-    if (!pickingColor)
+    if (!pickingTheme)
     {
         if (!event.target.matches('.dropdownBtn'))
         {

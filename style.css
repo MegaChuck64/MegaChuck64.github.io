@@ -1,6 +1,5 @@
 h1{
     font-size: 22px;
-    background-color: #1dd326;
     text-align: center;
 }
 
@@ -10,7 +9,6 @@ h1{
 #navbar{
     background-color: darkgray;
     list-style-type: none;
-    margin: 0;
     padding: 6px;
     border-radius: 6px;
 }
@@ -26,7 +24,6 @@ li a{
     padding: 20px;
     border-radius: 6px;
     margin: 6px;
-
 }
 
   
@@ -35,13 +32,14 @@ li a{
     background-color: black;
     color: white;
     padding: 20px;
-    font-size: 16px;
+    font-size: 18px;
     border: none;
     cursor: pointer;
     outline: none;
     border-radius: 6px;
     margin: 6px;
-
+    text-decoration: none;
+    font-weight: bold;
   }
   
   /* Dropdown button on hover & focus */
@@ -71,6 +69,12 @@ li a{
       padding: 6px;
   }
   
+  .optionPicker
+  {
+      outline-style: inset;
+      padding: 6px;
+  }
+
   /* Change color of dropdown links on hover */
   .dropdown-content a:hover {background-color: #dddddd}
   
