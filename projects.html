@@ -1,24 +1,30 @@
-<h3 class="project-header">Cardifacts</h3> 
+<!DOCTYPE html>
+<html>
 
-<div id="projects-grid" class="grid-container">
-   <div class="grid-item">
-        <img src="/assets/cardifactsScreenshot.png" alt="Cardifacts Screenshot"
-        style="width:480px;height:260px;">
-   </div>
-   <div class="grid-item">        
-        <p style="text-align:center;">
-            &emsp; A 2-5D roguelike action, card-collecting game
-            <br> made in Unity. It was made as my senior project
-            <br> over a 25 week period. I made it with one other
-            <br> programmer and two artists
-            <br> &emsp; My main responsibilites included procedural
-            <br> dungeon generation as well as handling the
-            <br> structure of the card system.
-            <br>
-            <br>
-            <br> You can download it
-            <a style="text-decoration: none;" href="https://heliumsmiles.itch.io/cardifacts">here.</a>
-        </p>
-    </div>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="style.css">
+    <script src="libraries/p5.js"></script>
+    <script src="libraries/p5.dom.js"></script>
+    <script src="utils.js"></script>
+    <script src="global.js"></script>
+    <script src="sketch.js"></script>
 
-</div>
+    <title>CSCJ</title>
+</head>
+
+<body id="body">
+
+    <div include-html="navbar.html"></div>
+
+    <div include-html="projectList.html"></div>
+
+</body>
+
+<script> 
+    includeHTML(); 
+</script>
+
+
+</html>
