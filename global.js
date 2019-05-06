@@ -65,8 +65,6 @@ function LoadTheme(doc)
     var nCol = findChildByID(doc, "navbarColor", true);
     nCol.value = localStorage.getItem("navbar_color");
 
-    var weatherPicker = findChildByID(doc, "weatherSelect", true);
-    weatherPicker.value = localStorage.getItem("weather");
 }
 
 function PickingTheme(val)
