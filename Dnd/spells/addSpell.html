@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="../../style.css">
+    
+        <script src="../../utils.js"></script>
+        <script src="../../global.js"></script>
+        <script src="../dnd.js"></script>
+    
+        <title>Add Spell</title>
+    </head>
+    
+    <body id="body">
+    
+        
+        <div include-html="../navbar_dnd.html"></div>   
+    
+        <h3 style="text-align:center">Add Spell</h3>
+        
+        <div class="grid-item">
+                <form id="addSpellFrm" class="addSpellForm" action="http://127.0.0.1:8888/" method="POST">
+                    
+            
+                    <input type="hidden" name="FormType" value="SpellAdd"
+                    <br>
+                    Spell Name:
+                    <br>
+                    <input type="text" name="spellName" value="">
+                    
+                    <br>         
+                    Spell Description:
+                    <br>
+                    <textarea form="addSpellFrm" name="spellDescription" rows="4", cols="12"></textarea>    
+                    
+                    <br>
+                    <input type="submit" value="Submit">
+                    <br>
+                </form>
+
+                
+        </div>
+
+        <script> 
+                includeHTML(); 
+        </script>
+        
+    </body>
+    
+    
+    
+    
+    </html>
+
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="../../style.css">
+    
+        <script src="../../utils.js"></script>
+        <script src="../../global.js"></script>
+        <script src="../dnd.js"></script>
+    
+        <title>Dice Roller</title>
+    </head>
+    
+    <body id="body">
+    
+        
+        <div include-html="../navbar_dnd.html"></div>   
+    
+        <h3 style="text-align:center">Dice Roller</h3>
+        
+        <div class="grid-item">
+            <form id="diceRollerForm" onsubmit="RollDice(this)">      
+                <input type="hidden" id="diceroll" value="1">
+                <br>
+                Dice Count:
+                <br>
+                <input type="number" id="numDice" value="1">
+                
+                <br>         
+                Number of Sides:
+                <br>
+                <input type="number" id="numSides" value="6">
+                <br>
+                        
+                <br>
+                <input type="submit" value="Roll">
+                <br>
+            </form>
+         
+        
+        </div>
+        
+        
+
+
+        <div id="diceOutput"></div>
+    
+    
+        <script>LoadTools();</script>
+        
+        
+        <script> 
+                includeHTML(); 
+        </script>
+        
+    </body>
+    
+    
+    
+    
+    </html>
+
+
+

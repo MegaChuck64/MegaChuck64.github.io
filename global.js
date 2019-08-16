@@ -57,13 +57,13 @@ function LoadTheme(doc)
     //body
     document.body.style.backgroundColor = localStorage.getItem("body_color");
     var bCol = findChildByID(doc, "backgroundColor", true);
-    bCol.value = localStorage.getItem("body_color");
+    if (bCol != null) bCol.value = localStorage.getItem("body_color");
 
     //nav bar
     var navbar = findChildByID(doc, "navbar", true);
-    navbar.style.backgroundColor = localStorage.getItem("navbar_color");
+    if (navbar != null) navbar.style.backgroundColor = localStorage.getItem("navbar_color");
     var nCol = findChildByID(doc, "navbarColor", true);
-    nCol.value = localStorage.getItem("navbar_color");
+    if (nCol != null) nCol.value = localStorage.getItem("navbar_color");
 
 }
 

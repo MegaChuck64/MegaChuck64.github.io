@@ -30,12 +30,15 @@ function getAllDescendants(el, childNodeList)
 
     var children = el.childNodes;
 
-    for (var i =0; i < children.length; i++)
+    if (children !== undefined)
     {
-        if (children[i].nodeType == 1)
+        for (var i =0; i < children.length; i++)
         {
-            childNodeList.push(children[i]);
-            childNodeList = getAllDescendants(children[i], childNodeList);
+            if (children[i].nodeType == 1)
+            {
+                childNodeList.push(children[i]);
+                childNodeList = getAllDescendants(children[i], childNodeList);
+            }
         }
     }
 
